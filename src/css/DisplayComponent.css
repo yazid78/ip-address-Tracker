@@ -1,0 +1,18 @@
+.displayContainer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 60px;
+  z-index: 1000;
+}
+
+.display {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100px;
+  background-color: gray;
+  border-radius: 15px;
+  width: 80%;
+}
