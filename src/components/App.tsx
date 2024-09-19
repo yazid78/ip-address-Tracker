@@ -1,16 +1,15 @@
 import '../css/App.css'
-import DisplayComponent from './DisplayComponent.tsx'
-import Header from './HeaderComponent.tsx'
-import LeafletComponent from './LeafletComponent.js'
+
+import IpDisplayComponent from './IpDisplayComponent.tsx'
 
 function App() {
 
 
   return (
     <>
-      <Header />
-      <DisplayComponent />
-      <LeafletComponent />
+
+
+      <IpDisplayComponent />
     </>
   )
 }

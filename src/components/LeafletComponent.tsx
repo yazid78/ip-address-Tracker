@@ -1,26 +1,36 @@
-import { Icon } from 'leaflet'
-import '../css/LeafletComponent.css'
-import "leaflet/dist/leaflet.css"
-import { MapContainer, TileLayer, Marker, Popup, } from 'react-leaflet'
+import { Icon } from 'leaflet';
+import '../css/LeafletComponent.css';
+import "leaflet/dist/leaflet.css";
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { IpData } from './IpDisplayComponent';
 
-const LeafletComponent = () => {
-    const customIcon = new Icon({
-        iconUrl: "../images/icon-location.svg",
-        iconSize: [38, 48]
-    })
+const customIcon = new Icon({
+    iconUrl: "../images/icon-location.svg",
+    iconSize: [38, 48]
+});
+
+const LeafletComponent = ({ ipData }: { ipData: IpData | null }) => {
+    if (!ipData) return null;
+
     return (
-        <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+
+        <MapContainer
+            key={`${ipData.location.lat}-${ipData.location.lng}`}
+            center={[ipData.location.lat, ipData.location.lng]}
+            zoom={13}
+            scrollWheelZoom={true}
+        >
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={[51.505, -0.09]} icon={customIcon}>
+            <Marker position={[ipData.location.lat, ipData.location.lng]} icon={customIcon}>
                 <Popup>
-                    A pretty CSS3 popup. <br /> Easily customizable.
+                    {ipData.location.city}, {ipData.location.country}
                 </Popup>
             </Marker>
         </MapContainer>
     );
-}
+};
 
 export default LeafletComponent;

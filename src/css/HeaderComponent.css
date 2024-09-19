@@ -9,34 +9,47 @@ nav img {
 .title {
   text-align: center;
   position: relative;
-  top: -250px;
+  top: -340px;
   color: white;
 }
 #search {
   z-index: 1000;
   position: relative;
-  top: -170px;
-  width: 400px;
+  top: -220px;
+  width: 450px;
+  height: 70px;
   border: none;
   outline: none;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 .input {
   display: flex;
   justify-content: center;
   border: none;
 }
+input::placeholder {
+  font-size: 20px;
+  color: grey;
+  padding-left: 10px;
+}
 .input button {
   z-index: 1000;
   position: relative;
-  top: -170px;
-  height: 40px;
+  top: -220px;
+  height: 70px;
+  width: 70px;
   background: black;
   border: none;
   cursor: pointer;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 .input button img {
   height: 30px;
   margin-top: 2px;
+  object-fit: contain;
+}
+.input button:hover {
+  background-color: rgb(55 65 81);
 }
