@@ -30,7 +30,7 @@ const Header = ({ setIp }: HeaderProps) => {
 
     return (
         <nav>
-            <img src="../images/pattern-bg-desktop.png" alt="image de fond header" />
+            <img src="../../images/pattern-bg-desktop.png" alt="image de fond header" />
 
             <div className='input'>
 
