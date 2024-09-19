@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import '../css/HeaderComponent.css';
+import patternBg from '../../images/pattern-bg-desktop.png';
+import iconArrow from '../../images/icon-arrow.svg';
 
 type HeaderProps = {
     setIp: (ip: string) => void;
@@ -30,7 +32,7 @@ const Header = ({ setIp }: HeaderProps) => {
 
     return (
         <nav>
-            <img src="/images/pattern-bg-desktop.png" alt="image header" />
+            <img src={patternBg} alt="image header" />
 
             <div className='input'>
 
@@ -45,7 +47,7 @@ const Header = ({ setIp }: HeaderProps) => {
                 />
 
                 <button onClick={handleClick}>
-                    <img src="/images/icon-arrow.svg" alt="Search" />
+                    <img src={iconArrow} alt="Search" />
                 </button>
             </div>
             <h1 className='title'>IP Address Tracker</h1>
