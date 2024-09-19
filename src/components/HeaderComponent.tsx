@@ -45,7 +45,7 @@ const Header = ({ setIp }: HeaderProps) => {
                 />
 
                 <button onClick={handleClick}>
-                    <img src="../images/icon-arrow.svg" alt="Search" />
+                    <img src="../../images/icon-arrow.svg" alt="Search" />
                 </button>
             </div>
             <h1 className='title'>IP Address Tracker</h1>
