@@ -53,3 +53,10 @@ input::placeholder {
 .input button:hover {
   background-color: rgb(55 65 81);
 }
+
+@media (max-width: 600px) {
+  input::placeholder {
+    font-size: 16px;
+    padding-left: 10px;
+  }
+}

@@ -30,3 +30,16 @@
   border-right: none;
   width: 150px;
 }
+
+@media (max-width: 600px) {
+  .infoSection {
+    font-size: 12px;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+  .display {
+    flex-direction: column;
+    height: 200px;
+  }
+}

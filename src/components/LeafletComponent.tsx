@@ -3,9 +3,10 @@ import '../css/LeafletComponent.css';
 import "leaflet/dist/leaflet.css";
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { IpData } from './IpDisplayComponent';
+import iconUrl from '../../images/icon-location.svg';
 
 const customIcon = new Icon({
-    iconUrl: "../images/icon-location.svg",
+    iconUrl: iconUrl,
     iconSize: [38, 48]
 });
 
